@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        for (int line_no = 1; scan.hasNext()==true; line_no++){
+            System.out.println(line_no+" "+ scan.nextLine());
+        }
+    }
+}
