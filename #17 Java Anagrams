@@ -1,11 +1,51 @@
 import java.util.Scanner;
 
 public class Solution {
- 
-   static boolean isAnagram(String a, String b) {
-   /////
-   
-   
+    static boolean isAnagram(String a, String b) {
+    //edge case 1- check if the strings are null
+    if( a == null || b == null || a.equals("") || b.equals(""))
+        throw new IllegalArgumentException();
+
+    //check if the length is equal
+    if (a.length() != b.length())
+        return false;
+
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+
+
+    java.util.HashMap<Character, Integer> map = new java.util.HashMap<>();
+    //creating hashmap for chars in string a
+    for (int i = 0; i < a.length(); i++){
+        
+        char ch = a.charAt(i);    
+
+        if( ! map.containsKey(ch)){
+            map.put( ch, 1 );
+        } else {
+            Integer count = map.get( ch );
+            map.put( ch, ++count );
+        }
+    }
+    //decreasing frequency of chars in hashmap whenever the char is present in string b
+    for (int j = 0; j < b.length(); j++){
+        
+        char ch = b.charAt(j);
+
+        if( ! map.containsKey( ch ) )
+            return false;
+
+        Integer count = map.get( ch );
+
+        if( count == 0 )
+            return false;
+        else    
+            map.put( ch, --count);
+    }
+    
+    return true;
+    }
+
     public static void main(String[] args) {
     
         Scanner scan = new Scanner(System.in);
