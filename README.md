@@ -1,6 +1,7 @@
 # Hackerrank_Java_Section
 
 Hey there😃
+
 If you are an absolute beginner in Java, I got your covered. Because I recently switched from Python to Java. So I'm as thin as you are at this. 
 
 The plan is simple. I'm learning and practicing on Hackerrank and soon on leetcode. So instead of making notes, I've created this repo where I'll put all the solutions, share some resources and hopefully explain the code I write.
