@@ -1,3 +1,6 @@
+//for this question, you need to have knowlegde about ranges of data types like short, int and long. 
+//2^15, 2^31, 2^63 are those ranges for each data type. That's what we use to determine which number can be fitted in the data types.
+
 import java.util.*;
 import java.io.*;
 
