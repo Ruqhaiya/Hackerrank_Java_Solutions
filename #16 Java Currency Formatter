@@ -8,11 +8,13 @@ public class Solution {
         double payment = scanner.nextDouble();
         scanner.close();
         
-        // Write your code here.
-        
         System.out.println("US: " + NumberFormat.getCurrencyInstance(Locale.US).format(payment));
         System.out.println("India: " + NumberFormat.getCurrencyInstance(new Locale("en", "IN")).format(payment));
         System.out.println("China: " + NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment));
         System.out.println("France: " + NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment));
     }
 }
+//NumberFormat is a class which formats/parses numbers based on the country we specify
+//getCurrencyInstance will get the currency for the specific country
+//Locale is another class that brings the locale of different countries. But it doesn't have an object for India, that's why we create it and give "en" as the language and IN as the geographic location. 
+//resources are already mentioned in the question. Go through them if you still don't get the gist of it.
