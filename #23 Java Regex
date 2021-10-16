@@ -14,8 +14,42 @@ class Solution{
     }
 }
 
-//Write your code here
 class myRegex { 
-    String zeroTo255 = "([0-9]|[0-9][0-9]|(0|1)[0-9][0-9]|2[0-4][0-9]|25[0-5])"; 
-    public String pattern = zeroTo255 + "." + zeroTo255 + "." + zeroTo255 + "." + zeroTo255; 
+    String IpAddressPattern = "([0-9]|[0-9][0-9]|(0|1)[0-9][0-9]|2[0-4][0-9]|25[0-5])"; 
+    public String pattern = IpAddressPattern + "." + IpAddressPattern + "." + IpAddressPattern + "." + IpAddressPattern; 
     }
+    
+/* 
+
+The questions has the following conditions: 
+        1. IP address is a string in the form "A.B.C.D", where the value of A, B, C, and D may range from 0 to 255.
+        2. Leading zeros are allowed.
+        3. The length of A, B, C, or D can't be greater than 3.
+
+
+IpAddressPattern = ([0-9]|[0-9][0-9]|(0|1)[0-9][0-9]|2[0-4][0-9]|25[0-5])
+
+This expression basically says:
+"Hey listen, I start from 0 and end at 255"
+
+
+In regex, we can't say d[0-255]
+Because regular expressions are expressions and not ranges. 
+This is the reason why we have four parts in one expression to specify simple ranges from 0-255.
+So, we write an expression with all possible patterns, for just one part(A) of our IP address - 000.12.12.034(A.B.C.D) and then we define another string by concatenating "."
+
+
+Acc to the conditions: 
+We have to specify single digit numbers(0-9), double digit numbers(10-99), triple digit numbers(100-199), then 200-249, and lastly 250-255
+                        [0-9]               |         [0-9][0-9]         |        (0|1)[0-9][0-9]        |  2[0-4][0-9]     |   25[0-5]
+
+
+The OR operator is self-explanatory. If the string matches any of the four patterns, then it is a valid string. 
+
+
+The above expression was for one part of the string.
+That's why we create another string called pattern : IpAddressPattern + "." + IpAddressPattern + "." + IpAddressPattern + "." + IpAddressPattern; 
+
+
+
+*/
