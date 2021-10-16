@@ -8,7 +8,10 @@ public class Solution
 		int testCases = Integer.parseInt(in.nextLine());
 		while(testCases>0){
 			String pattern = in.nextLine();
-          	//Write your code
+			
+            //Pattern.compile throws an error(PatternSyntaxException) if the pattern is invalid, 
+	    //this is why we write this code in a try and catch block
+	    
             try{
                 Pattern p = Pattern.compile(pattern);
                 System.out.println("Valid");
