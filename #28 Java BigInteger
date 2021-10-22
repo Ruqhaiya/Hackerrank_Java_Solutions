@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        
+        BigInteger n1 = new BigInteger(scan.next());
+        BigInteger n2 = new BigInteger(scan.next());
+        BigInteger s, prod;
+        
+        s = n1.add(n2);
+        prod = n1.multiply(n2);
+        
+        System.out.println(s);
+        System.out.println(prod);
+    }
+    
+}
