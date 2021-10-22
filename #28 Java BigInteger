@@ -22,3 +22,32 @@ public class Solution {
     }
     
 }
+
+
+Another way by using scan.nextBigInteger method:
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        
+        BigInteger num1 = scan.nextBigInteger();
+        BigInteger num2 = scan.nextBigInteger();
+        BigInteger s, prod;
+        
+        s = num1.add(num2);
+        prod = num1.multiply(num2);
+        
+        System.out.println(s);
+        System.out.println(prod);
+    }
+    
+}
